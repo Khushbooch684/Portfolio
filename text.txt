@@ -1,1 +1,2 @@
 hello this is my text file 
+now this is my next line 
