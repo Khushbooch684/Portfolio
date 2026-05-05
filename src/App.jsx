@@ -5,6 +5,8 @@ import {CustomCursor} from "./Components/CustomCursor.jsx";
 import {About} from "./Components/About.jsx";
 import { Projects } from "./Components/Projects.jsx";
 import { Skills } from "./Components/Skills.jsx";
+import { Achievements } from "./Components/Achievements.jsx";
+import { Contact } from "./components/Contact";
 
 
 export default function App() {
@@ -19,7 +21,10 @@ export default function App() {
       <About></About>
       <Skills></Skills>
       <Projects></Projects>
+      <Achievements></Achievements>
+      <Contact></Contact>
       <CustomCursor></CustomCursor>
+
     </>)
     
 }

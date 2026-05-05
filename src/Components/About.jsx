@@ -1,82 +1,96 @@
-import {motion}   from "framer-motion";
-import Header from "./Header";
-export const About =() => {
-    return <>
-    
-    <section 
-    id="About"
-    className="min-h-screen bg-gradient-to-b from-violet-900 to-black text-white flex items-center px-10 lg:px-24"
+import { motion } from "framer-motion";
+import { Stats } from "./Stats";
+
+
+
+
+export const About = () => {
+
+  
+  return (
+    <section
+      id="About"
+      className="min-h-screen bg-gradient-to-b from-violet-900 via-black to-black text-white px-5 sm:px-8 lg:px-24 py-16 flex items-center"
     >
-           <div className="grid lg:grid-cols-2 gap-10 items-center w-full">
+      <div className="grid lg:grid-cols-2 gap-12 w-full items-center">
 
         {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FFCC00] to-white bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-purple-400 bg-clip-text text-transparent">
             About Me
           </h2>
 
-          <p className="text-lg text-gray-300 leading-relaxed">
-            I am a final-year Computer Science student passionate about building
-            scalable and user-friendly web applications. I specialize in{" "}
-            <span className="text-yellow-400">MERN stack</span> and{" "}
-            <span className="text-yellow-400">Java Spring Boot</span>, and I enjoy
-            solving real-world problems using technology.
+          {/* SHORT INTRO (better UX) */}
+          <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+            Backend-focused Full Stack Developer passionate about building{" "}
+            <span className="text-yellow-400">scalable systems</span> and{" "}
+            <span className="text-purple-400">real-world solutions</span>.
           </p>
 
-          <p className="mt-4 text-lg text-gray-400">
-            I have built projects like{" "}
-            <span className="text-purple-400 font-semibold">HomeMeal</span> and an
-            Excel Analytics Platform, while also strengthening my problem-solving
-            skills through Data Structures and Algorithms.
+          <p className="mt-4 text-gray-400 text-sm sm:text-base">
+            I specialize in <span className="text-yellow-400">MERN stack</span>{" "}
+            and <span className="text-yellow-400">Spring Boot</span>, with a focus
+            on backend performance optimization and API design.
           </p>
+
+          <p className="mt-4 text-gray-400 text-sm sm:text-base">
+            Built impactful projects like{" "}
+            <span className="text-purple-400 font-semibold">HomeMeal</span> and
+            improved query performance by{" "}
+            <span className="text-green-400">15–20%</span>.
+          </p>
+
+          {/* STATS */}
+         <Stats />
         </motion.div>
 
-        {/* RIGHT SIDE (CARDS) */}
+        {/* RIGHT SIDE */}
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5"
         >
+          {[
+            {
+              title: "Full Stack",
+              desc: "MERN + Backend systems",
+            },
+            {
+              title: "DSA",
+              desc: "250+ problems solved",
+            },
+            {
+              title: "Projects",
+              desc: "Real-world apps like HomeMeal",
+            },
+            {
+              title: "Learning",
+              desc: "Exploring Golang & scalable systems",
+            },
+          ].map((card, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05 }}
+              className="relative p-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg overflow-hidden"
+            >
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-yellow-400/10 opacity-0 hover:opacity-100 transition"></div>
 
-          {/* Card 1 */}
-          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:scale-105 transition">
-            <h3 className="text-xl font-semibold text-yellow-400">Full Stack</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              MERN + Spring Boot development experience
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:scale-105 transition">
-            <h3 className="text-xl font-semibold text-yellow-400">DSA</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              250+ problems solved on coding platforms
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:scale-105 transition">
-            <h3 className="text-xl font-semibold text-yellow-400">Projects</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Real-world applications like HomeMeal
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:scale-105 transition">
-            <h3 className="text-xl font-semibold text-yellow-400">Learning</h3>
-            <p className="text-sm text-gray-300 mt-2">
-              Always exploring new technologies
-            </p>
-          </div>
-
+              <h3 className="text-lg font-semibold text-yellow-400 relative z-10">
+                {card.title}
+              </h3>
+              <p className="text-sm text-gray-300 mt-2 relative z-10">
+                {card.desc}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
-    </>
-}
+  );
+};
