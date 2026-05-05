@@ -6,7 +6,7 @@ import {About} from "./Components/About.jsx";
 import { Projects } from "./Components/Projects.jsx";
 import { Skills } from "./Components/Skills.jsx";
 import { Achievements } from "./Components/Achievements.jsx";
-import { Contact } from "./components/Contact";
+import { Contact } from "./Components/Contact.jsx";
 
 
 export default function App() {
