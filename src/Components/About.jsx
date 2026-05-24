@@ -33,7 +33,7 @@ export const About = () => {
 
           <p className="mt-4 text-gray-400 text-sm sm:text-base">
             I specialize in <span className="text-yellow-400">MERN stack</span>{" "}
-            and <span className="text-yellow-400">Spring Boot</span>, with a focus
+            and <span className="text-yellow-400">Database Optimisation</span>, with a focus
             on backend performance optimization and API design.
           </p>
 

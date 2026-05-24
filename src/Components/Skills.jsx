@@ -12,7 +12,6 @@ const skillData = [
     skills: [
       { name: "JavaScript", icon: <FaJs />, level: 90 },
       { name: "Python", icon: <FaPython />, level: 80 },
-      { name: "Golang", icon: <span>⚡</span>, level: 60 },
       { name: "C++", icon: <span>💻</span>, level: 75 },
     ],
   },
@@ -40,6 +39,14 @@ const skillData = [
       { name: "MongoDB", icon: <SiMongodb />, level: 85 },
       { name: "MySQL", icon: <SiMysql />, level: 80 },
       { name: "Firebase", icon: <SiFirebase />, level: 85 },
+    ],
+  },
+  {
+    title: "AI/ ML",
+    skills: [
+      { name: "Machine Learning", icon: <SiMongodb />,level : 30 },
+      { name: "Prompt Engineering", icon: <SiMysql />, level : 60 },
+      { name: "LLm APIs(OpenAI)", icon: <SiFirebase />, level : 50 },
     ],
   },
   {

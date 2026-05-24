@@ -50,7 +50,7 @@ export const Hero_section = () => {
             {/* cv download button  */}
           <div>
          
-            <motion.a href="/public/KCcv.pdf"
+            <motion.a href="/Khushboo_resume.pdf"
              download
              initial={{opacity : 0, y : 80}}
             animate ={{opacity : 1, y : 0}}
